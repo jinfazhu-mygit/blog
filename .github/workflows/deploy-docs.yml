@@ -20,15 +20,13 @@ jobs:
           # submodules: true
 
       - name: 设置 pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v2
 
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: pnpm
-
-      - run: npm install -g pnpm@8 # 安装指定版本的 pnpm
 
       - name: 安装依赖
         run: |
